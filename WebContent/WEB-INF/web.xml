@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<display-name>Construction Management System</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>  
+	    <servlet-name>cms</servlet-name>  
+	    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
+	    <load-on-startup>1</load-on-startup>  
+	</servlet>
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>ProjectDetailedReport</display-name>
+		<servlet-name>ProjectDetailedReport</servlet-name>
+		<servlet-class>com.practise.construction.management.utils.ProjectDetailedReport</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>ReportEmployee</display-name>
+		<servlet-name>ReportEmployee</servlet-name>
+		<servlet-class>com.practise.construction.management.utils.ReportEmployee</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>ReportContractor</display-name>
+		<servlet-name>ReportContractor</servlet-name>
+		<servlet-class>com.practise.construction.management.utils.ReportContractor</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>TaskReport</display-name>
+		<servlet-name>TaskReport</servlet-name>
+		<servlet-class>com.practise.construction.management.utils.TaskReport</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>MaterialReport</display-name>
+		<servlet-name>MaterialReport</servlet-name>
+		<servlet-class>com.practise.construction.management.utils.MaterialReport</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>EmployeeReport</display-name>
+		<servlet-name>EmployeeReport</servlet-name>
+		<servlet-class>com.practise.construction.management.utils.EmployeeReport</servlet-class>
+	</servlet>  
+
+	<servlet-mapping>  
+	    <servlet-name>cms</servlet-name>  
+	    <url-pattern>*.html</url-pattern>  
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ProjectDetailedReport</servlet-name>
+		<url-pattern>/ProjectDetailedReport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ReportEmployee</servlet-name>
+		<url-pattern>/ReportEmployee</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ReportContractor</servlet-name>
+		<url-pattern>/ReportContractor</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TaskReport</servlet-name>
+		<url-pattern>/TaskReport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>MaterialReport</servlet-name>
+		<url-pattern>/MaterialReport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>EmployeeReport</servlet-name>
+		<url-pattern>/EmployeeReport</url-pattern>
+	</servlet-mapping>  
+</web-app>
